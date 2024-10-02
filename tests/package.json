@@ -1,0 +1,21 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cucumber.js",
+  "scripts": {
+    "test": "cucumber-js --format json:reports/cucumber_report.json && node reports/generate-report.js"
+  },
+  "author": "Juan Daniel Cardona",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.3.2",
+    "@faker-js/faker": "^8.4.1",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^3.0.1",
+    "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^7.1.1"
+  }
+}

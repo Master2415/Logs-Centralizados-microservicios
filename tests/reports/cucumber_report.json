@@ -1,0 +1,273 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "recuperación-de-logs-de-la-api;recuperación-exitosa-de-logs-con-parámetros-válidos",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Recuperación exitosa de logs con parámetros válidos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario desea obtener registros de logs de la API",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2906099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "los registros están disponibles en la base de datos",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 216800
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Parameter",
+                      "Description"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "page",
+                      "Número de página"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "pageSize",
+                      "Tamaño de página"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "startDate",
+                      "Fecha de inicio para filtrar logs"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "endDate",
+                      "Fecha de finalización para filtrar logs"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "logType",
+                      "Tipo de log para filtrar"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 6,
+            "name": "los siguientes parámetros de consulta están disponibles para el usuario:",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 281899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "el usuario envía una solicitud GET a /api/logs/",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81635500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "el código de respuesta de /api/logs debe ser 200",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 499700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "el cuerpo de la respuesta debe contener un arreglo de LOGS",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68557200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "recuperación-de-logs-de-la-api;no-se-encuentran-logs-dentro-de-los-parámetros-de-consulta",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "No se encuentran logs dentro de los parámetros de consulta",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario desea obtener registros de logs de la API",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 136499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "los registros están disponibles en la base de datos",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241899
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Parameter",
+                      "Description"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "page",
+                      "Número de página"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "pageSize",
+                      "Tamaño de página"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "startDate",
+                      "Fecha de inicio para filtrar logs"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "endDate",
+                      "Fecha de finalización para filtrar logs"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "logType",
+                      "Tipo de log para filtrar"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 6,
+            "name": "los siguientes parámetros de consulta están disponibles para el usuario:",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "el usuario envía una solicitud GET a /api/logs/ con parametros que no retornan info",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15115600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "el código de respuesta de /api/logs debe ser 404",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "el cuerpo de la respuesta debe contener un mensaje de error",
+            "match": {
+              "location": "features\\step_definitions\\getLogs.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1766099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "recuperación-de-logs-de-la-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Recuperación de Logs de la API",
+    "tags": [],
+    "uri": "features\\getLogs.feature"
+  }
+]
